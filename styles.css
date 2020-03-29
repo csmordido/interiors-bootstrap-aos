@@ -226,8 +226,8 @@ button[type="submit"]:hover {
   }  
  }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+/* Medium devices (tablets, 768px and up) 
+@media (min-width: 768px) {  }*/
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
@@ -261,12 +261,17 @@ button[type="submit"]:hover {
 
   .bi-arrow-down {       
     position: relative;
-    bottom: -3vh;
-    transition: transform 0.4s;
+    bottom: -2vh; 
+    animation-name: down-motion;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;  
+    animation-timing-function: ease-out; 
   }
 
-  .bi-arrow-down:hover {
-    transform: scale(1.5);
+  @keyframes down-motion {
+    0% {bottom: -3vh;}
+    50% {bottom: -2vh;}
+    100% {bottom: -3vh;}
   }
 
   header {    
@@ -355,5 +360,5 @@ button[type="submit"]:hover {
   }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+/* Extra large devices (large desktops, 1200px and up) 
+@media (min-width: 1200px) {  }*/
